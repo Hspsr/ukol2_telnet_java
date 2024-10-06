@@ -3,9 +3,10 @@ package utb.fai;
 public class App {
 
     public static void main(String[] args) {
-        // TODO: Implement input parameter processing
+        String serverIP = args[0];
+        int port = Integer.parseInt(args[1]);
 
-        TelnetClient telnetClient = new TelnetClient("127.0.0.1", 23);
+        TelnetClient telnetClient = new TelnetClient(serverIP,port);
         telnetClient.run(); // run telnet client
     }
 }
